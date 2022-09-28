@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import Google from '../images/google.png';
 import Apple from '../images/apple.png';
@@ -6,7 +7,7 @@ import Microsoft from '../images/microsoft.png';
 
 // import PropTypes from 'prop-types'
 
-function login() {
+function create() {
   return (
     <div className='login-main'>
         <section className='left'>
@@ -17,7 +18,7 @@ function login() {
             </div>
         </section>
         <section className='login-body'>
-            <h1>Sign In</h1>
+            <h1>Create an Account</h1>
             <div className='login-col'>
               <div className='login-opt'><img src={Apple} alt="apple-logo" />
               <h3>Continue with apple</h3></div>
@@ -30,10 +31,10 @@ function login() {
             <div className='hori'><hr />OR <hr /></div>
             <form action="#">
                 <input className="email" name="email" type="email" placeholder="Email address"/>
-                <input type="password" name="password" className="password" placeholder="Password"/>
-                <button>Continue</button>
+                <Link to="create/create2"><button>Continue</button></Link>
+                
             </form>
-            <h4>Don't have an account <span>Sign up</span></h4>
+            <h4>Already have an account <span>Sign in</span></h4>
         </section>
     </div>
   )
@@ -41,4 +42,4 @@ function login() {
 
 // login.propTypes = {}
 
-export default login
+export default create;

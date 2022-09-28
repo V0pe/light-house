@@ -1,10 +1,20 @@
-import LoginPage from './pages/login.js'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from './pages/login';
+import LandingPage from './pages/LandingPage';
+import CreatePage from './pages/CreatePage';
+import CreatePage2 from './pages/CreatePage2';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <LoginPage />
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="login" element={<LoginPage />} />
+        <Route exact path="create" element={<CreatePage />} />
+        <Route exact path="create/create2" element={<CreatePage2 />} />
+      </Routes>
     </div>
   );
 }
