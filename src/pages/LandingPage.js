@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import Illustration from '../images/Illustration.png';
+import {Link} from 'react-router-dom';
+import './phone.css';
 
 // import PropTypes from 'prop-types'
 
@@ -12,7 +13,7 @@ function LandingPage() {
           <Link to="/">
             <img src={Logo} className="app-logo" alt='light-house' />
           </Link>
-          <Link to="create">
+          <Link to="dashboard">
             <button id="get-started">Get Started</button>
           </Link>
         </section>
